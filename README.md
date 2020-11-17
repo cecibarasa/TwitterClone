@@ -16,7 +16,6 @@
 * `Django3.0.7`
 * `HTML`
 * `CSS`
-* `JAVASCRIPT`
 
 ### [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/cecibarasa/TwitterClone/blob/master/LICENSE.md)
 
