@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 import django_heroku
-import dj_database_url
+# import dj_database_url
 
 # from decouple import config, Csv
 
@@ -42,11 +42,11 @@ import dj_database_url
 
 # db_from_env = dj_database_url.config(conn_max_age=500)
 # DATABASES['default'].update(db_from_env)
-#ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+# ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
-DATABASES = {
-	'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-}
+# DATABASES = {
+# 	'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+# }
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -63,6 +63,7 @@ SECRET_KEY = '*n*f0zqlu+cgn&m*sd3^qkz9b=nw6db(tfo$156o9ag-%2f_eq'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+WSGI_APPLICATION = 'api.wsgi.app'
 
 
 # Application definition
@@ -122,12 +123,14 @@ DATABASES = {
         'NAME': 'twitter',
         'USER': 'nabalayo',
         'PASSWORD':'karitie',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
-DATABASES = {
-	"default": dj_database_url.parse(os.environ.get("postgres://twitter_0kai_user:Z02o6yv8t8f759GPBeZst0dtJTVgxQrj@dpg-cmocspol5elc738s5mc0-a.oregon-postgres.render.com/twitter_0kai"))
-}
+# DATABASES = {
+# 	"default": dj_database_url.parse(os.environ.get("postgres://twitter_0kai_user:Z02o6yv8t8f759GPBeZst0dtJTVgxQrj@dpg-cmocspol5elc738s5mc0-a.oregon-postgres.render.com/twitter_0kai"))
+# }
 
 
 REST_FRAMEWORK = {
