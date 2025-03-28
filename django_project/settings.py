@@ -63,7 +63,7 @@ SECRET_KEY = '*n*f0zqlu+cgn&m*sd3^qkz9b=nw6db(tfo$156o9ag-%2f_eq'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-WSGI_APPLICATION = 'api.wsgi.app'
+WSGI_APPLICATION = 'TwitterClone.wsgi.app'
 
 
 # Application definition
